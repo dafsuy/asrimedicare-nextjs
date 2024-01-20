@@ -10,13 +10,13 @@ export default function Brand() {
         alt="PT. Adi Saka Mandiri"
         className="w-8 mr-3 lg:w-10"
       />
-      <h1
+      <p
         id="author"
         className={`text-xl font-bold transition duration-500 ease-in-out text-logo lg:text-xl ${inter.className}`}
       >
         PT. ADI <span className={` text-accent`}>SAKA</span>{' '}
         MANDIRI
-      </h1>
+      </p>
     </div>
   );
 }
