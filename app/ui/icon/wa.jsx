@@ -1,9 +1,7 @@
-  export default function WaIcon({color, width, height}) {
+export default function WaIcon({ color, width, height }) {
   return (
     <svg
       className={`${color} ${width} ${height}`}
-      width={width}
-      height={height}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
     >

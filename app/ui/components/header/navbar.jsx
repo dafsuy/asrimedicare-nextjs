@@ -6,10 +6,12 @@ import { navListData } from '@/app/lib/data';
 import Hamburger from './hamburger/hamburger';
 import { useState } from 'react';
 import clsx from 'clsx';
+import BackgroundNav from './backgroundNav';
 
 export default function Navbar() {
   const [isOn, setisOn] = useState(false);
   const navList = navListData;
+  const classToRemove = 'translate-w-full';
   const toggle = () => {
     return setisOn(!isOn);
   };
@@ -19,8 +21,9 @@ export default function Navbar() {
       <nav
         id="nav-menu"
         className={clsx(
-          'fixed top-[69px] right-0 z-[1500] h-screen font-semibold text-slate-700 transition-all duration-300 ease-in translate-x-full lg:h-auto lg:w-full lg:translate-x-0 lg:pt-0 w-60 bg-white lg:static lg:block lg:bg-transparent lg:shadow-none lg:opacity-100 border-l lg:border-none overflow-x-hidden px-3',
-          { '-translate-x-[1px]': isOn === true }
+          'fixed top-[52px] right-0 z-[1500] h-screen font-semibold text-slate-700 transition-all duration-300 ease-out lg:h-auto lg:w-full lg:translate-x-0 lg:pt-0 w-60 bg-white lg:static lg:block lg:bg-transparent lg:shadow-none lg:opacity-100 border-l lg:border-none px-3',
+          { 'translate-x-full': isOn === false },
+          { 'translate-x-0': isOn === true }
         )}
       >
         <ul id="nav-list" className="block text-md lg:flex lg:items-center">
@@ -51,6 +54,7 @@ export default function Navbar() {
         {/* Hamburger */}
       </nav>
       <Hamburger isOn={isOn} onCLick={toggle}></Hamburger>
+      <BackgroundNav isOn={isOn}></BackgroundNav>
     </div>
   );
 }
