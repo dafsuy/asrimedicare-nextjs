@@ -21,7 +21,7 @@ export default function Navbar() {
       <nav
         id="nav-menu"
         className={clsx(
-          'fixed top-[52px] right-0 z-[1500] h-screen font-semibold text-slate-700 transition-all duration-300 ease-out lg:h-auto lg:w-full lg:translate-x-0 lg:pt-0 w-60 bg-white lg:static lg:block lg:bg-transparent lg:shadow-none lg:opacity-100 border-l lg:border-none px-3',
+          'fixed top-[54px] right-0 z-[1500] h-screen font-semibold text-slate-700 transition-all duration-300 ease-out lg:h-auto lg:w-full lg:translate-x-0 lg:pt-0 max-w-3/4 bg-white lg:static lg:block lg:bg-transparent lg:shadow-none lg:opacity-100 border-l lg:border-none px-3',
           { 'translate-x-full': isOn === false },
           { 'translate-x-0': isOn === true }
         )}
@@ -32,6 +32,7 @@ export default function Navbar() {
               key={list.id}
               href={list.link}
               className="flex py-2 ml-8 duration-300 ease-in lg:border-none text-dark hover:text-primary"
+              onClick={() => toggle()}
             >
               {list.name}
             </Link>
@@ -40,6 +41,7 @@ export default function Navbar() {
           <Link
             href="/request"
             className="block px-3 py-2 mx-auto mt-3 text-sm text-center text-white duration-300 ease-in rounded-full lg:mt-0 bg-primary lg:flex lg:ml-8 lg:border-none text-dark group-hover:text-white bg-secondary"
+            onClick={() => toggle()}
           >
             Request For Quotation
           </Link>
@@ -54,7 +56,7 @@ export default function Navbar() {
         {/* Hamburger */}
       </nav>
       <Hamburger isOn={isOn} onCLick={toggle}></Hamburger>
-      <BackgroundNav isOn={isOn}></BackgroundNav>
+      <BackgroundNav onCLick={toggle} isOn={isOn}></BackgroundNav>
     </div>
   );
 }

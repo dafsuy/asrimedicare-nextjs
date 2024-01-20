@@ -1,9 +1,8 @@
 'use client';
-import { useState } from 'react';
 import './hamburger.css';
 import clsx from 'clsx';
 
-export default function Hamburger({isOn, onCLick}) {
+export default function Hamburger({ isOn, onCLick }) {
   return (
     <button
       id="hamburger"
