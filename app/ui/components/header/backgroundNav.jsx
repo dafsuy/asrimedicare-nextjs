@@ -7,8 +7,8 @@ export default function BackgroundNav({ isOn, onClick }) {
       onClick={onClick}
       className={clsx(
         'fixed left-0 w-full h-screen transition-all ease-out duration-500 z-[100] lg:hidden  bg-black/60 backdrop-blur-sm top-[54px]',
-        { 'opacity-0': isOn === false },
-        { 'opacity-100': isOn === true }
+        { hidden: isOn === false },
+        { visible: isOn === true }
       )}
     ></div>
   );

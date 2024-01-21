@@ -1,4 +1,5 @@
 import 'aos/dist/aos.css';
+import Link from 'next/link'
 export default function HeroSection() {
   return (
     <section>
@@ -28,18 +29,18 @@ export default function HeroSection() {
                 data-aos-duration="3000"
                 data-aos-easing="ease-out-back"
               >
-                <a
-                  href="request.html"
+                <Link
+                  href="/request"
                   className="w-full px-5 py-2 text-xs font-bold text-center text-white transition duration-75 ease-in border border-white rounded-full lg:text-sm hover:bg-white/50 hover:text-white active:scale-95 lg:hidden"
                 >
                   Request For Quotation
-                </a>
-                <a
-                  href="#contact"
+                </Link>
+                <Link
+                  href="/contact"
                   className="w-full px-5 py-2 text-xs font-bold text-center text-white transition duration-75 ease-in border border-white rounded-full lg:text-sm hover:bg-white/50 hover:text-white active:scale-95"
                 >
                   Contact Now
-                </a>
+                </Link>
               </div>
             </div>
           </div>

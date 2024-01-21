@@ -1,4 +1,4 @@
-import LinkTo from '../ui/components/header/linkTo';
+import LinkTo from '../ui/components/linkTo';
 
 export default function AboutSection() {
   return (

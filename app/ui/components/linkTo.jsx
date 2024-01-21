@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import Go from '../../icon/go';
+import Go from '../icon/go';
 export default function LinkTo({ classname, link, children }) {
   return (
     <Link
-      className={`${classname} font-bold text-primary  flex flex-row items-center group cursor-pointer`}
+      className={`${classname} font-bold text-primary  inline-flex flex-row items-center group cursor-pointer`}
       href={link}
     >
       {children}
