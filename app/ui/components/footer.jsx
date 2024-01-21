@@ -12,7 +12,7 @@ export default function Footer() {
           Navigate Your Healthcare With Our Innovative Solutions.
         </h2>
       </div>
-      <div className="flex flex-row flex-wrap w-full gap-5 mt-10 sm:flex-row justify-evenly">
+      <div className="flex flex-col flex-wrap w-full gap-5 mt-10 sm:flex-row justify-evenly">
         {footLinkList.map((listTitle) => (
           <div key={listTitle.id}>
             <h2 className="font-semibold text-slate-800">{listTitle.name}</h2>
