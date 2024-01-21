@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import AboutSection from './section/aboutSection';
 import BrandSection from './section/brandSection';
+import ProductsSection from './section/productsSection';
 
 export default function Home() {
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function Home() {
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
       <BrandSection></BrandSection>
+      <ProductsSection></ProductsSection>
     </>
   );
 }

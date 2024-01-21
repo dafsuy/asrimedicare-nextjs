@@ -1,17 +1,17 @@
 export const navListData = [
   {
-    id: '1',
+    id: 'nl-1',
     name: 'Home',
     link: '/'
   },
-  { id: '2', name: 'Product', link: '/products' },
-  { id: '3', name: 'About', link: '/about' },
-  { id: '4', name: 'Contact', link: '/contact' }
+  { id: 'nl-2', name: 'Product', link: '/products' },
+  { id: 'nl-3', name: 'About', link: '/about' },
+  { id: 'nl-4', name: 'Contact', link: '/contact' }
 ];
 
 export const footLinkList = [
   {
-    id: '1',
+    id: 'tl-1',
     name: 'Pages',
     list: [
       {
@@ -42,7 +42,7 @@ export const footLinkList = [
     ]
   },
   {
-    id: '2',
+    id: 'tl-2',
     name: 'Products',
     list: [
       {
@@ -68,7 +68,7 @@ export const footLinkList = [
     ]
   },
   {
-    id: '1',
+    id: 'tl-3',
     name: 'Company',
     list: [
       {
@@ -97,5 +97,32 @@ export const footLinkList = [
         link: '/about#legality'
       }
     ]
+  }
+];
+
+export const productsCategoryHome = [
+  {
+    id: 'pc-1',
+    name: 'Electromedic',
+    link: '/products#electromedic',
+    image: '/decoration/electromedic-home.jpg'
+  },
+  {
+    id: 'pc-2',
+    name: 'HVAC',
+    link: '/products#hvac',
+    image: '/decoration/hvac-home.jpg'
+  },
+  {
+    id: 'pc-3',
+    name: 'Vehicle',
+    link: '/products#vehicle',
+    image: '/decoration/ambulance-home.jpg'
+  },
+  {
+    id: 'pc-4',
+    name: 'Hospital Furniture',
+    link: '/products#hospital-furniture',
+    image: '/decoration/furniture-home.jpg'
   }
 ];
