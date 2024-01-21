@@ -3,9 +3,9 @@ import LinkTo from '../ui/components/header/linkTo';
 export default function AboutSection() {
   return (
     <section id="welcome" className="pt-20 lg:pt-28">
-      <div className="container flex flex-col gap-10 px-4 mx-auto md:flex-row md:items-center md:justify-evenly animete-up">
+      <div className="container flex flex-col gap-10 px-4 mx-auto sm:flex-row md:items-center md:justify-evenly animete-up">
         <div
-          className="w-full bg-center bg-cover rounded-bl-[50%] h-52 sm:h-96"
+          className="w-full bg-center bg-cover rounded-bl-[50%] h-52 sm:max-w-md"
           style={{
             backgroundImage: 'url("/decoration/welcome-home.jpg")'
           }}
@@ -16,7 +16,7 @@ export default function AboutSection() {
           data-aos-duration="1000"
           data-aos-easing="ease-out"
         >
-          <h2 className="text-4xl font-bold sm:text-5xl text-darkColor">
+          <h2 className="text-2xl font-bold md:text-3xl text-darkColor">
             Since 2011,
           </h2>
           <p className="mt-5 text-slate-600">
