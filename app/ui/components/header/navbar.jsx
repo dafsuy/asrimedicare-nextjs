@@ -21,7 +21,7 @@ export default function Navbar() {
       <nav
         id="nav-menu"
         className={clsx(
-          'fixed top-[54px] right-0 z-[1500] h-screen font-semibold text-slate-700 transition-all duration-300 ease-out lg:h-auto lg:w-full lg:translate-x-0 lg:pt-0 w-2/3 sm:w-1/3 bg-white lg:static lg:block lg:bg-transparent lg:shadow-none lg:opacity-100 border-l lg:border-none px-3',
+          'fixed top-[54px] right-0 z-[1500] h-screen font-semibold text-slate-700 transition-all duration-500 ease-out lg:h-auto lg:w-full lg:translate-x-0 lg:pt-0 w-2/3 sm:w-1/3 bg-white lg:static lg:block lg:bg-transparent lg:shadow-none lg:opacity-100 border-l lg:border-none px-3',
           { 'translate-x-full': isOn === false },
           { 'translate-x-0': isOn === true }
         )}

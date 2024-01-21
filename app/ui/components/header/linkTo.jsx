@@ -2,11 +2,16 @@ import Link from 'next/link';
 import Go from '../../icon/go';
 export default function LinkTo({ classname, link, children }) {
   return (
-    <span
-      className={`${classname} font-bold text-primary transition ease-in-out items-center flex-row inline-flex`}
+    <Link
+      className={`${classname} font-bold text-primary  flex flex-row items-center group cursor-pointer`}
+      href={link}
     >
-      <Link href={link}>{children}</Link>
-      <Go style={'w-10 text-primary'} />
-    </span>
+      {children}
+      <Go
+        style={
+          'ml-5 group-hover:ml-1 w-8 transition-all ease-out duration-500 text-primary'
+        }
+      />
+    </Link>
   );
-} 
+}
