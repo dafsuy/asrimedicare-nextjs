@@ -1,5 +1,7 @@
 import CopyRight from './copyright';
 import Sosmed from './sosmed';
+import { footLinkList } from '@/app/lib/data';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -10,70 +12,28 @@ export default function Footer() {
           Navigate Your Healthcare With Our Innovative Solutions.
         </h2>
       </div>
-      <div className="flex flex-col flex-wrap w-full gap-5 mt-10 sm:flex-row justify-evenly">
-        <div>
-          <h2 className="footer-title-list">Pages</h2>
-          <ul className="footer-list">
-            <li className="footer-list">
-              <a href="index.html">Home</a>
-            </li>
-            <li className="footer-list">
-              <a href="product.html">Our Product</a>
-            </li>
-            <li className="footer-list">
-              <a href="about.html">About</a>
-            </li>
-            <li className="footer-list">
-              <a href="index.html#contact">Contact</a>
-            </li>
-            <li className="footer-list">
-              <a href="request.html">Request For Quotation</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h2 className="footer-title-list">Product</h2>
-          <ul className="footer-list">
-            <li className="footer-list">
-              <a href="product.html#electromedic">Electromedic</a>
-            </li>
-            <li className="footer-list">
-              <a href="product.html#hvac">HVAC</a>
-            </li>
-            <li className="footer-list">
-              <a href="product.html#vehicle">Vehicle</a>
-            </li>
-            <li className="footer-list">
-              <a href="product.html#hospital-furniture">Hospital Furniture</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h2 className="footer-title-list">Company</h2>
-          <ul className="footer-list">
-            <li className="footer-list">
-              <a href="about.html#preface">Preface</a>
-            </li>
-            <li className="footer-list">
-              <a href="about.html#background">Background</a>
-            </li>
-            <li className="footer-list">
-              <a href="about.html#vision-mission">Vision & Mission</a>
-            </li>
-            <li className="footer-list">
-              <a href="about.html#structure">Structure</a>
-            </li>
-            <li className="footer-list">
-              <a href="about.html#legality">Legality</a>
-            </li>
-          </ul>
-        </div>
+      <div className="flex flex-row flex-wrap w-full gap-5 mt-10 sm:flex-row justify-evenly">
+        {footLinkList.map((listTitle) => (
+          <div key={listTitle.id}>
+            <h2 className="font-semibold text-slate-800">{listTitle.name}</h2>
+            <ul>
+              {listTitle.list.map((link) => (
+                <li
+                  key={link.id}
+                  className="my-3 font-semibold transition ease-in text-slate-500 hover:text-secondary"
+                >
+                  <Link href={link.link}>{link.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
       {/* Sosmed */}
       <div className="mt-10">
         <hr />
         <Sosmed />
-        <CopyRight/>
+        <CopyRight />
       </div>
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
         <div className="absolute m-auto w-[500px] bg-cover blur-sm opacity-20 aspect-square bg-footer-pattern -right-60 bottom-40 sm:bottom-0"></div>
