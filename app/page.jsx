@@ -5,6 +5,7 @@ import AOS from 'aos';
 import AboutSection from './section/aboutSection';
 import BrandSection from './section/brandSection';
 import ProductsSection from './section/productsSection';
+import ContactSection from './section/contactSection';
 
 export default function Home() {
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutSection></AboutSection>
       <BrandSection></BrandSection>
       <ProductsSection></ProductsSection>
+      <ContactSection></ContactSection>
     </>
   );
 }
