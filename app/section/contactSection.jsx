@@ -52,10 +52,10 @@ export default function ContactSection() {
             </form>
 
             <div className="mt-5">
-              <a href="https://wa.me/6281770584158">
+              <a href="https://wa.me/6281770584158" className='inline'>
                 <button
                   id="submit-form-wa"
-                  className="flex flex-row items-center gap-2 px-4 py-2 font-bold text-white transition ease-in-out rounded-full bg-primary hover:bg-primary active:scale-95"
+                  className="inline-flex flex-row items-center gap-2 px-4 py-2 font-bold text-white transition ease-in-out rounded-full bg-primary hover:bg-primary active:scale-95"
                   title="Send Message via Whatsapp"
                   type="button"
                 >
