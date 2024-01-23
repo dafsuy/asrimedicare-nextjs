@@ -1,14 +1,15 @@
 import 'aos/dist/aos.css';
-import Link from 'next/link'
+import Link from 'next/link';
+import ShapeDivider from '../ui/shape/shapeDivider';
 export default function HeroSection() {
   return (
-    <section>
+    <section className="relative">
       <div
         id="hero"
-        className="flex items-center w-full bg-left-top bg-cover filter"
+        className="relative flex items-center w-full bg-left-top bg-cover filter"
         style={{ backgroundImage: 'url("/hero.jpg")' }}
       >
-        <div className="flex items-center w-full h-full pt-60 lg:pt-40 pb-36 backdrop-brightness-50">
+        <div className="flex items-center w-full pt-60 lg:pt-40 pb-36 backdrop-brightness-50">
           <div className="container flex flex-col items-center justify-center px-4 mx-auto">
             <div className="max-w-xl">
               <h2
@@ -46,6 +47,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      <ShapeDivider/>
     </section>
   );
 }
